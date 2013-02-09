@@ -1,0 +1,7 @@
+# Copy this file to etc/config.yml and then put
+# your AWS access key and secret key in this file
+# NEVER SHARE THIS INFORMATION WITH ANYONE!
+# Best Practice: chmod 600 this file
+# Best Practice: use an IAM user, not root
+access_key_id: <YOUR ACCESS KEY HERE>
+secret_access_key: <YOUR SECRET KEY HERE>
