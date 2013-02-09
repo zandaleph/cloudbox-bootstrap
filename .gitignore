@@ -1,3 +1,4 @@
 rvm
 .rvmrc
 .gem
+config.yml
