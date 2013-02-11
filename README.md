@@ -67,6 +67,7 @@ This package still has a lot of limitations:
 + only supports one instance at a time
 + approximately zero fault tolerance
 + spot instances for cheap workspaces
++ setup cloudwatch to terminate idle workspaces?
 
 For the hardcoded stuff it might eventually be nice to have those as
 arguments to `bin/launch.sh`.  Supporting more than one instance
