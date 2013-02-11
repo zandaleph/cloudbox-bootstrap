@@ -31,10 +31,6 @@ while instance.status == :pending
     sleep(10)
 end
 
-File.open("var/workspace_ip", mode="w") do |f|
-    f.write(instance.ip_address)
-end
-
 workspace_info = {
     :ip => instance.ip_address,
     :id => instance.id,
@@ -45,3 +41,4 @@ File.open("var/workspace_info", mode="w") do |f|
     YAML.dump(workspace_info, f)
 end
 
+# TODO: wait until host is accepting connections via SSH?
