@@ -40,16 +40,22 @@ Run `bin/launch.sh` to start an instance.  This will create
 three files in the local `var` directory:
 
 + `workspace_key.pem` - your ssh key for the box
-+ `workspace_ip` - the ip address of the box
-+ `workspace_id` - the id of the ec2 instance
++ `workspace_info` - a YAML file of details about your instance
 
-After `launch.sh` is done, you can run `bin/connect.sh` at any
+After `bin/launch.sh` is done, you can run `bin/connect.sh` at any
 time to ssh to your cloud box.
 
 When you want to shut down your workspace, run `bin/terminate.rb`.
 Remember that you are charged a full hour for each time you start an
 instance, so do not feel the need to compulsively start and stop your
 instance every time you log out.
+
+Known Issues
+------------
+
+After running `bin/launch.sh`, `bin/connect.sh` will receive errors for
+a while as the operating system starts up.  One of these two scripts
+should probably detect this state and block until it clears.
 
 Future Plans
 ------------
@@ -60,6 +66,7 @@ This package still has a lot of limitations:
 + hardcoded instance size - t1.micro
 + only supports one instance at a time
 + approximately zero fault tolerance
++ spot instances for cheap workspaces
 
 For the hardcoded stuff it might eventually be nice to have those as
 arguments to `bin/launch.sh`.  Supporting more than one instance
