@@ -11,9 +11,9 @@ Tl;dr
 
 + `bin/boostrap.sh`
 + edit `etc/config.yml`
-+ `bin/start_instance.sh`
++ `bin/launch.sh`
 + `bin/connect.sh`
-+ `bin/stop_instance.sh`
++ `bin/terminate.sh`
 
 Requirements
 ------------
@@ -36,17 +36,17 @@ for format.
 Usage
 -----
 
-Run `bin/start_instance.sh` to start an instance.  This will create
+Run `bin/launch.sh` to start an instance.  This will create
 three files in the local `var` directory:
 
 + `workspace_key.pem` - your ssh key for the box
 + `workspace_ip` - the ip address of the box
 + `workspace_id` - the id of the ec2 instance
 
-After `start_instance.sh` is done, you can run `bin/connect.sh` at any
+After `launch.sh` is done, you can run `bin/connect.sh` at any
 time to ssh to your cloud box.
 
-When you want to shut down your workspace, run `bin/stop_instance.rb`.
+When you want to shut down your workspace, run `bin/terminate.rb`.
 Remember that you are charged a full hour for each time you start an
 instance, so do not feel the need to compulsively start and stop your
 instance every time you log out.
@@ -62,7 +62,7 @@ This package still has a lot of limitations:
 + approximately zero fault tolerance
 
 For the hardcoded stuff it might eventually be nice to have those as
-arguments to `bin/start_instance.sh`.  Supporting more than one instance
+arguments to `bin/launch.sh`.  Supporting more than one instance
 at a time is probably worth pursuing to support multiple users of the
 same AWS account.  Fault tolerance - meh, networks are 100% reliable :)
 
