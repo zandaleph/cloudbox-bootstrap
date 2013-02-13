@@ -40,7 +40,7 @@ Run `bin/launch.sh` to start an instance.  This will create
 three files in the local `var` directory:
 
 + `workspace_key.pem` - your ssh key for the box
-+ `workspace_info` - a YAML file of details about your instance
++ `workspace_info.yaml` - details about your instance
 
 After `bin/launch.sh` is done, you can run `bin/connect.sh` at any
 time to ssh to your cloud box.
