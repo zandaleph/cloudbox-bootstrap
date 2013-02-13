@@ -2,3 +2,5 @@ rvm
 .rvmrc
 .gem
 config.yml
+var/workspace_key.pem
+var/workspace_info.yaml

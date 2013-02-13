@@ -39,7 +39,7 @@ workspace_info = {
     :security_group_id => security_group.id,
     :key_pair_name => key_pair.name,
 }
-File.open("var/workspace_info", mode="w") do |f|
+File.open("var/workspace_info.yaml", mode="w") do |f|
     YAML.dump(workspace_info, f)
 end
 
