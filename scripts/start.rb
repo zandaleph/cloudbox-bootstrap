@@ -2,6 +2,8 @@ require 'rubygems'
 
 require 'yaml'
 require 'open-uri'
+require 'socket'
+require 'timeout'
 
 require 'aws-sdk'
 
@@ -41,4 +43,18 @@ File.open("var/workspace_info", mode="w") do |f|
     YAML.dump(workspace_info, f)
 end
 
-# TODO: wait until host is accepting connections via SSH?
+online = false
+until online
+    s = nil
+    begin
+        timeout(10) do
+            s = TCPSocket.new(workspace_info[:ip], 22)
+        end
+        online = true
+    rescue Exception => e
+        online = false
+        sleep(10)
+    ensure
+        s.close unless s.nil?
+    end
+end
