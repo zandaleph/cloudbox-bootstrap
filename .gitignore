@@ -1,6 +1,6 @@
 rvm
 .rvmrc
 .gem
-config.yml
+config.yaml
 var/workspace_key.pem
 var/workspace_info.yaml

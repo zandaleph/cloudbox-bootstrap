@@ -3,7 +3,7 @@ require 'aws-sdk'
 
 workspace_info = YAML.load_file("var/workspace_info.yaml")
 
-AWS.config(YAML.load_file('etc/config.yml'))
+AWS.config(YAML.load_file('etc/config.yaml'))
 ec2 = AWS::EC2.new(:ec2_endpoint => 'ec2.us-west-2.amazonaws.com')
 
 instance = ec2.instances[workspace_info[:id]]

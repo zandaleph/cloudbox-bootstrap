@@ -10,7 +10,7 @@ Tl;dr
 -----
 
 + `bin/boostrap.sh`
-+ edit `etc/config.yml`
++ edit `etc/config.yaml`
 + `bin/launch.sh`
 + `bin/connect.sh`
 + `bin/terminate.sh`
@@ -30,7 +30,7 @@ and the aws-sdk.  This might take a short while to compile everything.
 
 Once that is done (or while it is running), log into the AWS Management
 Console and grab your Access and Secret keys.  You need to create an
-`etc/config.yml` file with that information, see the provided template
+`etc/config.yaml` file with that information, see the provided template
 for format.
 
 Usage

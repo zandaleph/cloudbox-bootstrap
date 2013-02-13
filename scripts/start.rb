@@ -11,7 +11,7 @@ require 'aws-sdk'
 ip_addr = open("http://api.exip.org/?call=ip").read
 ip_cidr = ip_addr + "/0"
 
-AWS.config(YAML.load_file('etc/config.yml'))
+AWS.config(YAML.load_file('etc/config.yaml'))
 ec2 = AWS::EC2.new(:ec2_endpoint => 'ec2.us-west-2.amazonaws.com')
 
 security_group = ec2.security_groups.create("workspace security group")
